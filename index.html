@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PatentAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2e66d6',
+              'primary-dark': '#1d4ed8',
+              'background-light': '#f7f7f8',
+              'background-dark': '#151519',
+              'surface-light': '#ffffff',
+              'surface-dark': '#1e2126',
+            },
+            fontFamily: {
+              display: ['Manrope', 'sans-serif'],
+              sc: ['Noto Sans SC', 'sans-serif'],
+            },
+            boxShadow: {
+              glow: '0 0 20px -5px rgba(46, 102, 214, 0.5)',
+              paper: '0 2px 15px -3px rgba(0, 0, 0, 0.05), 0 10px 20px -2px rgba(0, 0, 0, 0.01)',
+              float: '0 10px 40px -10px rgba(0,0,0,0.08)',
+            },
+            animation: {
+              shimmer: 'shimmer 2s infinite',
+            },
+            keyframes: {
+              shimmer: {
+                '100%': { transform: 'translateX(100%)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .tech-bg {
+        background-color: #f0f4f8;
+        background-image: radial-gradient(at 100% 0%, hsla(220, 70%, 90%, 1) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, hsla(220, 65%, 88%, 1) 0px, transparent 50%),
+          linear-gradient(135deg, rgba(46, 102, 214, 0.05) 25%, transparent 25%),
+          linear-gradient(225deg, rgba(46, 102, 214, 0.05) 25%, transparent 25%),
+          linear-gradient(45deg, rgba(46, 102, 214, 0.05) 25%, transparent 25%),
+          linear-gradient(315deg, rgba(46, 102, 214, 0.05) 25%, transparent 25%);
+        background-position: 10px 0, 10px 0, 0 0, 0 0, 0 0, 0 0;
+        background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+      }
+      .dark .tech-bg {
+        background-color: #0f131a;
+        background-image: radial-gradient(at 100% 0%, hsla(222, 47%, 15%, 1) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, hsla(222, 47%, 15%, 1) 0px, transparent 50%),
+          linear-gradient(135deg, rgba(46, 102, 214, 0.03) 25%, transparent 25%),
+          linear-gradient(225deg, rgba(46, 102, 214, 0.03) 25%, transparent 25%),
+          linear-gradient(45deg, rgba(46, 102, 214, 0.03) 25%, transparent 25%),
+          linear-gradient(315deg, rgba(46, 102, 214, 0.03) 25%, transparent 25%);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .icon-filled {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white">
+    <div id="root"></div>
+  </body>
+</html>
